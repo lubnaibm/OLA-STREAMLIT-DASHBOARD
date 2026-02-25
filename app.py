@@ -120,14 +120,18 @@ queries = {
 
 # ---------------- Display Queries ----------------
 st.subheader("SQL Query Results")
-for title, query in queries.items():
-    st.markdown(f"### {title}")
+
+selected_query = st.selectbox(
+    "Select a Query",
+    list(queries.keys())
+)
+
+if st.button("Run Query"):
     try:
-        df = run_query(query)
+        df = run_query(queries[selected_query])
         st.dataframe(df)
     except Exception as e:
         st.error(f"Error running query: {e}")
-
 # ---------------- Power BI Dashboard ----------------
 st.markdown("---")
 st.subheader("Power BI Dashboard")
