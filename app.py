@@ -138,4 +138,4 @@ st.subheader("Power BI Dashboard")
 
 powerbi_url = "https://app.powerbi.com/reportEmbed?reportId=ad38d71a-d398-41cd-92c8-1e5412ab0495&autoAuth=true&ctid=d33f5f7d-5a08-4f2c-8a18-850f1ffec9ac"
 
-components.iframe(powerbi_url, width=1100, height=900)
+components.iframe(powerbi_url, width=1100, height=550)
